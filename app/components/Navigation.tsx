@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 
 export default function Navigation() {
     const [activeSection, setActiveSection] = useState("");
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
     const navItems = [
