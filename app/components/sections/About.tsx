@@ -12,14 +12,13 @@ export default function About() {
                 <div className="about-content">
                     <div className="about-text">
                         <p className="text-body">
-                            I'm a programming student at <span className="highlight-text">42 Heilbronn</span>, 
+                            I&apos;m a programming student at <span className="highlight-text">42 Heilbronn</span>, 
                             diving deep into systems programming and software development through hands-on 
                             projects and peer-to-peer learning.
                         </p>
                         <p className="text-body">
-                            Currently, I'm focused on mastering <span className="highlight-text">C and C++</span>, 
-                            while also exploring web development with modern frameworks like React and Next.js. 
-                            I love solving complex problems and building efficient, clean code.
+                            Currently, I&apos;m focused on mastering <span className="highlight-text">C and C++</span>, 
+                            while also exploring web development with modern frameworks like React and Next.js.
                         </p>
                     </div>
                 </div>

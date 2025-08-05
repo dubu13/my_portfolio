@@ -5,7 +5,7 @@ export default function Contact() {
                 <h2 className="heading-2">Let's Connect</h2>
             
                 <p className="text-muted contact-description">
-                    I'm always interested in new opportunities and collaborations.
+                    I&apos;m always interested in new opportunities and collaborations.
                     Feel free to reach out! 
                 </p>
 

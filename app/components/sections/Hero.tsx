@@ -6,7 +6,7 @@ export default function Hero() {
         <motion.section id="home" className="hero-section hero-animation">
             <div className="container-width">
                 <motion.h1 className="heading-1 hero-title-animation">
-                    <span className="gradient-text">Hi, I'm Dilara</span>
+                    <span className="gradient-text">Hi, I&apos;m Dilara</span>
                 </motion.h1>
 
                 <motion.p className="heading-2 hero-subtitle-animation">
