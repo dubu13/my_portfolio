@@ -2,7 +2,7 @@ export default function Contact() {
     return (
         <section id="contact" className="section-padding">
             <div className="container-width text-center">
-                <h2 className="heading-2">Let's Connect</h2>
+                <h2 className="heading-2">Let&apos;s Connect</h2>
             
                 <p className="text-muted contact-description">
                     I&apos;m always interested in new opportunities and collaborations.
