@@ -19,15 +19,27 @@ export default function Navigation() {
             setIsScrolled(window.scrollY > 20);
 
             const sections = ["home", "about", "projects", "contact"];
-            const current = sections.find(section => {
+            let current = "";
+
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const section = sections[i];
                 const element = document.getElementById(section);
+
                 if (element) {
                     const rect = element.getBoundingClientRect();
-                    return rect.top <= 100 && rect.bottom >= 100;
+
+                    if (section === "contact" &&
+                        window.innerHeight + window.scrollY >= document.body.offsetHeight - 100) {
+                            current = "contact";
+                            break;
+                    }
+                    if (rect.top <= 150) {
+                        current = section;
+                        break;
+                    }
                 }
-                return false;
-            });
-            setActiveSection(current || "");
+            }
+            setActiveSection(current);
         };
 
         window.addEventListener("scroll", handleScroll);
