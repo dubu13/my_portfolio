@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 export default function Navigation() {
     const [activeSection, setActiveSection] = useState("");
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const navItems = [
         { name: "Home", href: "#home"},
@@ -39,6 +40,7 @@ export default function Navigation() {
         e.preventDefault();
         const element = document.querySelector(href);
         element?.scrollIntoView({ behavior: "smooth" });
+        setIsMobileMenuOpen(false);
     };
 
     return (
@@ -53,7 +55,16 @@ export default function Navigation() {
                         Dilara
                     </a>
 
-                    <ul className="nav-menu">
+                    <button
+                        className="mobile-menu-btn"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul className="nav-menu desktop-menu">
                         {navItems.map((item) => (
                             <li key={item.name}>
                                 <a
@@ -66,7 +77,21 @@ export default function Navigation() {
                             </li>
                         ))}
                     </ul>
-                </div>
+
+                    <ul className={`nav-menu mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
+                        {navItems.map((item) => (
+                            <li key={item.name}>
+                                <a
+                                    href={item.href}
+                                    className={`nav-link ${activeSection === item.href.substring(1) ? "active" : ""}`}
+                                    onClick={(e) => scrollToSection(e, item.href)}
+                                >
+                                    {item.name}
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>    
             </div>
         </nav>
     );

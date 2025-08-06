@@ -22,6 +22,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1rem 0;
+      position: relative;
     }
 
     .nav-logo {
@@ -50,11 +51,11 @@
       font-weight: 500;
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
-      transition: all 0.3s ease;
+      transition: all 0.1s ease;
     }
 
     .nav-link:hover {
-      color: rgb(147, 51, 234);
+      color: rgb(167, 122, 209);
       background: rgba(147, 51, 234, 0.1);
     }
 
@@ -66,4 +67,100 @@
     }
 
     /* do mobile nav */
+    .mobile-menu-btn {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1001;
+    }
+
+    .mobile-menu-btn span {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -1rem;
+      right: -1rem;
+      background: linear-gradient(135deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.95));
+      backdrop-filter: blur(20px);
+      flex-direction: column;
+      padding: 1.5rem;
+      border: 1px solid rgba(147, 51, 234, 0.2);
+      border-top: 2px solid rgba(55, 65, 81, 0.3);
+      border-radius: 0 0 1rem 1rem;
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+      z-index: 999;
+      animation: slideDown 0.3s ease-out;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu li {
+      margin: 0.5rem 0;
+    }
+
+    .mobile-menu .nav-link {
+      display: block;
+      padding: 1rem 1.5rem;
+      text-align: center;
+      border-radius: 0.75rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+      width: 100%;
+      border: 1px solid transparent;
+      transition: all 0.6s ease;
+      position: relative;
+      overflow: hidden;
+      outline: none;
+    }
+
+    .mobile-menu .nav-link:hover {
+      background: linear-gradient(135deg, rgba(147, 51, 234, 0.2), rgba(168, 85, 247, 0.2));
+      border-color: rgba(147, 51, 234, 0.3);
+    }
+
+    .mobile-menu .nav-link.active {
+      background: linear-gradient(135deg, rgba(147, 51, 234, 0.3), rgba(168, 85, 247, 0.3));
+      border-color: rgb(147, 51, 234);
+      color: white;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }      
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .mobile-menu .nav-link:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(147, 51, 234, 0.2);
+      }
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+      .mobile-menu .nav-link:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+        background: rgba(147, 51, 234, 0.15);
+      }
+    }
 }

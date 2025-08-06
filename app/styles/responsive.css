@@ -1,6 +1,19 @@
 @layer utilities {
   /*mobile*/
   @media (max-width: 767px) {
+    /* Show mobile hamburger, hide desktop menu */
+    .mobile-menu {
+      display: none;
+    }
+ 
+    .mobile-menu-btn {
+      display: flex;
+    }
+
+    .desktop-menu {
+      display: none; /* Hide desktop navigation on mobile */
+    }
+
     .heading-1 {
       font-size: 2rem;
       text-align: center;
@@ -33,7 +46,6 @@
       text-align: center;
     }
 
-    
     .about-stats {
       grid-template-columns: 1fr;
       gap: 1.5rem;
@@ -77,19 +89,23 @@
       padding-left: 1rem;
       padding-right: 1rem;
     }
-
-    .nav-menu {
-      gap: 1rem;
-    }
-
-    .nav-link {
-      padding: 0.5rem 0.75rem;
-      font-size: 0.875rem;
-    }
   }
 
   /*tablet*/
   @media (min-width: 768px) and (max-width: 1023px) {
+    /* Hide mobile hamburger, show desktop menu */
+    .desktop-menu {
+      display: flex;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+    }  
+
     .heading-1 {
       font-size: 3.5rem;
     }
@@ -115,6 +131,19 @@
 
   /*desktop*/
   @media (min-width: 1024px) {
+    /* Hide mobile hamburger, show desktop menu */
+    .desktop-menu {
+      display: flex;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+    }
+    
     .heading-1 {
       font-size: 4rem;
     }
@@ -139,6 +168,18 @@
 
   /*large desktop*/
   @media (min-width: 1280px) {
+    .desktop-menu {
+      display: flex;
+    }
+
+    .mobile-menu {
+      display: none;
+    }  
+
+    .mobile-menu-btn {
+      display: none;
+    }  
+
     .container-width {
       max-width: 80rem;
     }
