@@ -2,7 +2,7 @@ export default function Contact() {
     return (
         <section id="contact" className="section-padding">
             <div className="container-width text-center">
-                <h2 className="heading-2">Let&apos;s Connect</h2>
+                <h2 className="heading-2 gradient-text section-header">Let&apos;s Connect</h2>
             
                 <p className="text-muted contact-description">
                     I&apos;m always interested in new opportunities and collaborations.
@@ -10,7 +10,7 @@ export default function Contact() {
                 </p>
 
                 <div className="contact-links">
-                    <a href="example@gmail.com" className="btn-primary">
+                    <a href="dilarahsn13@gmail.com" className="btn-primary">
                         Email Me
                     </a>
                     <a href="https://github.com/dubu13" target="_blank" className="btn-primary">

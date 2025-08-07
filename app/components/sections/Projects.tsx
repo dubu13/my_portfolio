@@ -4,7 +4,8 @@ export default function Projects() {
     return (
         <section id="projects" className="section-padding">
             <div className="container-width">
-                <h2 className="heading-2 text-center">My Projects</h2>
+                <h2 className="heading-2 gradient-text section-header">My Projects</h2>
+                <div className="section-underline"></div>
 
                 <div className="project-grid">
                     {projects.map((project) => (

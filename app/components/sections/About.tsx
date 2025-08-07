@@ -4,9 +4,9 @@ export default function About() {
     return (
         <section id="about" className="section-padding">
             <div className="container-width">
-                <div className="about-header">
+                <div className="section-header">
                     <h2 className="heading-2 gradient-text">About Me</h2>
-                    <div className="about-underline"></div>
+                    <div className="section-underline"></div>
                 </div>
             
                 <div className="about-content">
@@ -29,7 +29,7 @@ export default function About() {
                         <div className="stat-label">School Projects</div>
                     </div>
                     <div className="stat-item">
-                        <div className="stat-number">3+</div>
+                        <div className="stat-number">2+</div>
                         <div className="stat-label">Languages</div>
                     </div>
                     <div className="stat-item">
