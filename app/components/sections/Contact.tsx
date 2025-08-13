@@ -1,23 +1,30 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/hooks/useTranslations";
+
 export default function Contact() {
+    const { language } = useLanguage();
+    const t = translations[language as keyof typeof translations];
+
     return (
         <section id="contact" className="section-padding">
             <div className="container-width text-center">
-                <h2 className="heading-2 gradient-text section-header">Let&apos;s Connect</h2>
+                <div className="section-header">
+                    <h2 className="heading-2 gradient-text">{t.contact.title}</h2>
+                </div>
             
                 <p className="text-muted contact-description">
-                    I&apos;m always interested in new opportunities and collaborations.
-                    Feel free to reach out! 
+                    {t.contact.description}
                 </p>
 
                 <div className="contact-links">
-                    <a href="dilarahsn13@gmail.com" className="btn-primary">
-                        Email Me
+                    <a href="mailto:dilarahsn13@gmail.com" className="btn-primary">
+                        ✉️ {t.contact.emailBtn}
                     </a>
                     <a href="https://github.com/dubu13" target="_blank" className="btn-primary">
-                        GitHub
+                        🐙 {t.contact.githubBtn}
                     </a>
                     <a href="https://www.linkedin.com/in/dilara-hasan/" target="_blank" className="btn-primary">
-                        LinkedIn
+                        💼 {t.contact.linkedinBtn}
                     </a>
                 </div>
             </div>

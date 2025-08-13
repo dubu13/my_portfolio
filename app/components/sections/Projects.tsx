@@ -1,11 +1,18 @@
-import { projects } from "@/data/projects";
+import { projects } from "../../../data/projects";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/hooks/useTranslations";
 
 export default function Projects() {
+    const { language } = useLanguage();
+    const t = translations[language as keyof typeof translations];
+
     return (
         <section id="projects" className="section-padding">
             <div className="container-width">
-                <h2 className="heading-2 gradient-text section-header">My Projects</h2>
-                <div className="section-underline"></div>
+                <div className="section-header">
+                    <h2 className="heading-2 gradient-text">{t.projects.title}</h2>
+                    <div className="section-underline"></div>
+                </div>
 
                 <div className="project-grid">
                     {projects.map((project) => (
@@ -31,7 +38,7 @@ export default function Projects() {
                                         target="_blank"
                                         className="project-link"
                                     >
-                                        View Code
+                                        {t.projects.viewCode}
                                     </a>
                                 )}
                             </div>

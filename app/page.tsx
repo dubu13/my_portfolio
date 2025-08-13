@@ -1,9 +1,5 @@
 "use client";
 
-// import Image from "next/image";
-// import { motion }  from "framer-motion";
-// import { projects } from "@/data/projects";
-// import ProjectCard from "@/components/ProjectCard";
 import Navigation from "./components/Navigation";
 import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
