@@ -18,7 +18,6 @@ export default function ResumeRequestModal({ isOpen, onClose }: ResumeRequestMod
     });
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [submitError, setSubmitError] = useState(false);
-    const [isClosing, setIsClosing] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -42,7 +41,6 @@ export default function ResumeRequestModal({ isOpen, onClose }: ResumeRequestMod
                 setTimeout(() => {
                     onClose();
                     setIsSubmitted(false);
-                    setIsClosing(false);
                     setFormData({ name: '', email: '', company: '', message: '' });
                 }, 2000);
             } 
