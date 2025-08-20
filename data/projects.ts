@@ -4,9 +4,6 @@ export interface Projects {
     description: string;
     technologies: string[];
     githubUrl: string;
-    image?: string;
-    gif?: string;
-    vidoe?: string;
 }
 
 export const projects: Projects[] = [

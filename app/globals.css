@@ -8,9 +8,6 @@
   :root {
     --color-primary-blue: 59 130 246;
     --color-primary-purple: 147 51 234;
-    --color-secondary-purple: 168 85 247;
-    --color-light-blue: 147 197 255;
-    --color-light-purple: 192 132 252;
   }
 
   html {
@@ -82,7 +79,7 @@
 
 @layer utilities {
   .gradient-text {
-    background: linear-gradient(to right, rgb(var(--color-secondary-purple)), rgb(var(--color-primary-blue)));
+    background: linear-gradient(to right, rgb(147, 51, 234), rgb(59, 130, 246));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -93,7 +90,7 @@
   }
 
   .highlight-text {
-    color: rgb(var(--color-light-blue));
+    color: rgb(147, 197, 255);
     font-weight: 600;
   }
 
